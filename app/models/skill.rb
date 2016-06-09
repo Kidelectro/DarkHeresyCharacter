@@ -1,3 +1,5 @@
 class Skill < ActiveRecord::Base
-  belongs_to :character
+  has_many :groups
+  has_many :character_skills
+  has_many :characters, through: :character_skills
 end

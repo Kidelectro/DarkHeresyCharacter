@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  override_skill_type: 1
+  skill_step: 1
+
+two:
+  override_skill_type: 1
+  skill_step: 1
