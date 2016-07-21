@@ -1,0 +1,11 @@
+.jumbotron
+  .container
+    %h1 Dark Heresy Character Creater
+
+    - if current_user
+      menu stuff
+    - else
+      %p Here you can create new 40k characters, manage them as they level up and use it as a character sheet during play.
+      %p Sign up to get started.
+      = link_to new_user_path, class: 'btn btn-primary btn-lg' do
+        Sign Up &raquo;
