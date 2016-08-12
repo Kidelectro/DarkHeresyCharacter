@@ -1,0 +1,8 @@
+%ul#sidebar
+  = link_to 'Home', root_path, class: 'active'
+  - if current_user
+    %li
+      = current_user.first_name
+    %li Page 1
+    %li Page 2
+    %li Page 3
