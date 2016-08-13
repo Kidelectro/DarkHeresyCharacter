@@ -6,19 +6,11 @@
       = csrf_meta_tags
 
   %body
-    %nav.navbar.navbar-inverse
-      %h1 Dark Heresy Character Creater
-      %ul.nav.navbar-nav.navbar-right
-        %span.glyphicon.glyphicon-user
-        - if current_user
-          %li
-            = link_to 'Log Out', sign_out_path, method: :delete, class: 'glyphicon glyphicon-log-out'
-        - else
-          %li
-            = link_to 'Log In', sign_in_path, method: :get, class: 'glyphicon glyphicon-log-in'
-          %li
-            = link_to 'Sign Up', new_user_path, class: 'glyphicon glyphicon-pencil'
-
+    = render 'shared/header'
+    .col-sm-2
+      = render 'shared/navigation_menu'
+    .col-lg-8
+      = render 'shared/general_info'
+      = yield
     - flash.each do |key, value|
       %div{ :class => "alert alert#{key}" }= value
-    = yield
