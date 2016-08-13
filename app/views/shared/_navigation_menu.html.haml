@@ -1,8 +1,9 @@
 %ul#sidebar
   = link_to 'Home', root_path, class: 'active'
+  %p
   - if current_user
+    %span.glyphicon.glyphicon-user #{current_user.first_name}
     %li
-      = current_user.first_name
-    %li Page 1
+      = link_to 'Talents', talents_path
     %li Page 2
     %li Page 3
