@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :talents, only: [:index, :show]
+  resources :talents
   resources :skills, only: [:index, :show]
   resources :characters, only: [:index, :show]
 

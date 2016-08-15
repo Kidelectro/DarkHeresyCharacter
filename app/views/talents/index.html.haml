@@ -1,0 +1,4 @@
+%h1 Talents
+= link_to 'New Talent', new_talent_path
+- @talents.each do |talent|
+  = talent.name
